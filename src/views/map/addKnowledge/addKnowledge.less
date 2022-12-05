@@ -1,0 +1,48 @@
+.addKnowledge {
+    position: relative;
+
+    .title {
+        padding: 20px;
+        height: 70px;
+        font-size: 20px;
+        font-weight: bold;
+        border-bottom: 1px solid #e6e6e6;
+    }
+
+    .main {
+        padding: 0 20px;        // 上下  左右
+        .upper {
+            overflow: hidden; //父元素开启BFC，解决子元素高度塌陷
+            padding: 20px 0 20px;           // 上  左右  下
+            height: 70px;
+
+            .upper-left {
+                float: left;
+            }
+
+            .upper-right {
+                float: right;
+                .ant-btn {
+                    border: 0;
+                    background-color: #FAFAFA;
+                }
+            }
+        }
+
+        .example {
+            display: flex;
+            justify-content: center;
+            .example-content {
+                height: 230px;
+            }
+            .example-img {
+                img {
+                    height: 230px;
+                    width: 246px
+                }
+            }
+        }
+
+        
+    }
+}
